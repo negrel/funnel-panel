@@ -56,7 +56,7 @@ me at [alexandre@negrel.dev](mailto:alexandre@negrel.dev), open an
 
 Please give a :star: if this project helped you!
 
-[![buy me a coffee](.github/images/bmc-button.png)](https://www.buymeacoffee.com/negrel)
+[![buy me a coffee](https://github.com/negrel/funnel-panel/raw/master/.github/images/bmc-button.png)](https://www.buymeacoffee.com/negrel)
 
 ## :scroll: License
 
