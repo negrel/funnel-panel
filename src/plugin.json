@@ -2,12 +2,14 @@
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
   "type": "panel",
   "name": "Funnel",
-  "id": "mckn-funnel-panel",
+  "id": "negrel-funnel-panel",
   "info": {
-    "keywords": ["panel"],
-    "description": "Visualize how data moves through a process",
+    "keywords": [
+      "panel"
+    ],
+    "description": "Visualize how data moves through a process.",
     "author": {
-      "name": "mckn"
+      "name": "negrel"
     },
     "logos": {
       "small": "img/logo.svg",
@@ -16,17 +18,19 @@
     "links": [
       {
         "name": "Website",
-        "url": "https://github.com/mckn/grafana-funnel-panel"
+        "url": "https://github.com/negrel/funnel-panel"
       },
       {
         "name": "License",
-        "url": "https://github.com/mckn/grafana-funnel-panel/blob/master/LICENSE"
+        "url": "https://github.com/negrel/funnel-panel/blob/master/LICENSE"
       }
     ],
-    "screenshots": [{
-      "name": "Overview",
-      "path": "img/panel.png"
-    }],
+    "screenshots": [
+      {
+        "name": "Overview",
+        "path": "img/panel.png"
+      }
+    ],
     "version": "%VERSION%",
     "updated": "%TODAY%"
   },
