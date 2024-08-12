@@ -4,7 +4,7 @@ import tinycolor from 'tinycolor2';
 import { Icon, type IconName, useStyles2 } from '@grafana/ui';
 import { formatPercentage } from '../utils';
 import { useTooltipProps, BarGapTooltip } from './Tooltip';
-import { type DisplayValue } from '@grafana/data';
+import { GrafanaTheme2, type DisplayValue } from '@grafana/data';
 
 type Props = {
   from: DisplayValue;
@@ -48,14 +48,15 @@ function getIconName(from: number, to: number): IconName {
   return 'arrow-right';
 }
 
-const getStyles = (from: DisplayValue, to?: DisplayValue) => () => {
+const getStyles = (from: DisplayValue, to?: DisplayValue) => (theme: GrafanaTheme2) => {
   if (!to) {
     return {};
   }
 
   const toPercent = to.percent ?? 0;
   const fromPercent = from.percent ?? 0;
-  const color = tinycolor(from.color).darken(15).toHexString();
+  const bgColor = tinycolor(from.color).darken(5).toHexString();
+  const txtColor = tinycolor(theme.colors.text.primary).lighten().toHexString();
   const topLeft = 100 * ((1 - fromPercent) / 2);
   const topRight = 100 - topLeft;
   const bottomLeft = 100 * ((1 - toPercent) / 2);
@@ -73,12 +74,13 @@ const getStyles = (from: DisplayValue, to?: DisplayValue) => () => {
     barGap: css({
       flexGrow: 1,
       height: '100%',
-      backgroundColor: color,
+      backgroundColor: bgColor,
       clipPath: `polygon(${topLeft}% 0%, ${topRight}% 0%, ${bottomRight}% 100%, ${bottomLeft}% 100%)`,
     }),
     percentage: css({
       display: 'flex',
       position: 'absolute',
+      color: txtColor,
       width: `${toPercent * 100}%`,
       justifyContent: 'center',
       alignItems: 'center',
