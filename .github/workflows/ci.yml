@@ -15,10 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3
+      - uses: cachix/install-nix-action@v24
         with:
-          node-version: '16.x'
+          extra_nix_config: "system-features = nixos-test benchmark big-parallel kvm"
+
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
@@ -43,16 +43,16 @@ jobs:
             ${{ runner.os }}-${{ matrix.node-version }}-nodemodules-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: nix develop --command yarn install --frozen-lockfile
 
       - name: Build and test frontend
-        run: yarn build
+        run: nix develop --command yarn build
 
       - name: Start grafana docker
-        run: yarn server -d
+        run: nix develop --command yarn server -d
 
       - name: Run e2e tests
-        run: yarn e2e
+        run: nix develop --command yarn e2e
 
       - name: stop grafana docker
         run: docker-compose down
