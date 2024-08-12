@@ -1,9 +1,9 @@
-![GitHub](https://img.shields.io/github/license/mckn/mckn-funnel-panel)
-![Version](https://img.shields.io/github/package-json/v/mckn/mckn-funnel-panel)
+![GitHub](https://img.shields.io/github/license/negrel/funnel-panel)
+![Version](https://img.shields.io/github/package-json/v/negrel/funnel-panel)
 
 # Funnel Panel
 
-Grafana panel to create funnel charts
+Grafana panel to create funnel charts.
 
 ![Screenshot](https://raw.githubusercontent.com/mckn/mckn-funnel-panel/83b6605fa913001f965ff951892c9bdf13429f07/src/img/panel.png)
 
@@ -23,10 +23,6 @@ The most common scenarios for this would be if you have a pre-baked view contain
 
 We have provided an example [dashboard](https://github.com/mckn/mckn-funnel-panel/blob/main/provisioning/dashboards/panels.json) to show case both of these scenarios in the panel.
 
-## Contributing
-
-- For bugs or enhancements please create an [issue](https://github.com/mckn/mckn-funnel-panel/issues/new).
-
 ## Development
 
 To run the plugin locally:
@@ -43,3 +39,26 @@ yarn run dev
 # Start a local instance of Grafana with a provisioned dashboard.
 docker-compose up
 ```
+
+## Why fork?
+
+Original repository is unmaintained and I need to some changes to be merged
+for [Prisme Analytics](https://github.com/prismelabs/analytics).
+
+## Contributing
+
+If you want to contribute to `funnel-panel` to add a feature or improve the code contact
+me at [alexandre@negrel.dev](mailto:alexandre@negrel.dev), open an
+[issue](https://github.com/negrel/funnel-panel/issues) or make a
+[pull request](https://github.com/negrel/funnel-panel/pulls).
+
+## :stars: Show your support
+
+Please give a :star: if this project helped you!
+
+[![buy me a coffee](.github/images/bmc-button.png)](https://www.buymeacoffee.com/negrel)
+
+## :scroll: License
+
+Apache-2.0 © [Alexandre Negrel](https://www.negrel.dev/), forked from
+[mckn/mckn-funnel-panel](https://github.com/mckn/mckn-funnel-panel)
