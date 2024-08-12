@@ -23,23 +23,6 @@ The most common scenarios for this would be if you have a pre-baked view contain
 
 We have provided an example [dashboard](https://github.com/mckn/mckn-funnel-panel/blob/main/provisioning/dashboards/panels.json) to show case both of these scenarios in the panel.
 
-## Development
-
-To run the plugin locally:
-
-```sh
-# Get the source code.
-git clone git@github.com:mckn/mckn-funnel-panel.git
-cd mckn-funnel-panel
-
-# Install dependencies and build the plugin.
-yarn install
-yarn run dev
-
-# Start a local instance of Grafana with a provisioned dashboard.
-docker-compose up
-```
-
 ## Why fork?
 
 Original repository is unmaintained and I need to some changes to be merged
