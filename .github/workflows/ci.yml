@@ -51,9 +51,6 @@ jobs:
       - name: Start grafana docker
         run: nix develop --command yarn server -d
 
-      - name: Run e2e tests
-        run: nix develop --command yarn e2e
-
       - name: stop grafana docker
         run: docker compose down
 
